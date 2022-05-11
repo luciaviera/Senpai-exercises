@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 9fr;
-    grid-template-areas:
-        "nav nav"
-        "header aside";
-    min-height: 100vh;
-    color: white;
-}
+@media (min-width:900px){
+    body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0.9fr 9.1fr;
+        grid-template-areas:
+            "nav nav"
+            "header aside";
+        min-height: 100vh;
+        color: white;
+        
+    }
 
+}
+@media (max-width:900px) {
+    body {
+        display: grid;
+        grid-template-rows: 0.9fr 3fr 6.1fr;
+        grid-template-areas:
+            "nav"
+            "header"
+            "aside";
+        min-height: 100vh;
+        color: white;
+    }
+}
 nav {
     display: flex;
     grid-area: nav;
@@ -22,6 +38,7 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    min-width: 0;
 }
 
 ul {
@@ -31,36 +48,37 @@ ul {
     justify-content: space-between;
 }
 
-    ul > li {
-        margin: 0 10px;
-    }
+ul > li {
+    margin: 0 10px;
+}
 
 header {
     grid-area: header;
     background-color: #132334;
-    font-family: Pacifico;
+    font-family: Pattaya;
     font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px cadetblue;
 }
 
 aside {
     grid-area: aside;
     background-color: tomato;
-    font-family: Roboto;
+    font-family: 'Times New Roman';
     display: flex;
     align-items: center;
 }
 
-    aside > div > h2 {
-        margin-bottom: 2rem;
-    }
+aside > div > h1 {
+    margin-bottom: 2rem;
+    display:flex;
+    justify-content:center;
+}
 
-    aside > div > * {
-        margin: 1rem;
-    }
+aside > div > * {
+    margin: 1rem;
+}
 
 form {
     display: flex;
@@ -69,21 +87,22 @@ form {
     box-shadow: 0 0 10px 5px #bb442e;
 }
 
-    form > * {
-        font-family: 'Arial Unicode MS';
-        border: none;
-    }
+form > * {
+    font-family: 'Arial Unicode MS';
+    border: none;
+}
 
-    form > input {
-        flex-grow: 2;
-    }
+form > input {
+    flex-grow: 2;
+}
 
-    form > button {
-        flex-grow: 1;
-        background-color: khaki;
-        font-size: 1rem;
-    }
+form > button {
+    flex-grow: 1;
+    background-color: khaki;
+    font-size: 1rem;
+}
 
-        form > button:hover {
-            background-color: yellow;
-        }
+form > button:hover {
+    background-color: yellow;
+}
+
