@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+nav{
+    display:block;
+    margin:10px 30px;
+}
+nav li{
+    display:inline;
+
+}
+
+/*Para colocar contenido entre varios elementos */
+li + li ::before {
+    content: "|";
+    margin: 5px;
+}
+
+h1{
+    margin:10px 0px;
+}
+
+img {
+    display:inline; 
+    width:300px;
+    border:5px solid yellow;
+    box-shadow: 2px 0 0 1px red;
+    margin:5px;
+}
+
+form{
+    margin:5px 5px;
+    width:350px;
+}
+form input[type=text]{
+   border-top:5px solid midnightblue;
+   margin-top:0px;
+}
+
+form input, button{
+    display:block;
+    margin:5px 5px;
+    width:inherit;
+    box-shadow:0 0 1px 0.1px grey;
+}
+
+button {
+    background-color: steelblue;
+    color: white;
+    border-color: grey;
+    padding:3px;
+    box-shadow: 0 0 1px 0px black;
+}

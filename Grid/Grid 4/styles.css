@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+/*Centrar contenido usando flex en el padre, 
+    el hijo tiene que tener menor tamaño para que se note */
+body{
+    display:flex;
+    align-items:center;
+    height:100vh;
+}
+div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 9fr 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "nav article"
+        "nav ads"
+        "footer footer";
+    width:100vw;
+}
+
+div *{   /*Para todos los elementos hijos de body*/
+    background-color:yellowgreen; 
+    margin:0.1rem;
+    padding:0.2rem;
+}
+
+header{
+    grid-area:header;
+}
+nav {
+    grid-area:nav;
+}
+article {
+    grid-area:article;
+}
+section {
+    grid-area:ads;
+}
+footer {
+    grid-area:footer;
+}
+p{
+    font-size:5px;
+}

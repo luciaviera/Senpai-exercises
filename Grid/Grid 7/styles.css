@@ -1,0 +1,66 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 75% 10%;
+    width:100vw;
+    height: 100vh;
+    border: 0.5vw solid grey;
+    grid-template-areas:
+        "header"
+        "content" /*NO se puede tener celdas separadas con el mismo nombre*/
+        "footer";
+    color:white;
+}
+header {
+    grid-area: header;
+    background-color: deepskyblue;
+}
+footer {
+    grid-area: footer;
+    background-color: royalblue;
+}
+body > *{
+    padding:1vw;
+}
+.flex{
+    display:flex;
+    justify-content:center;
+    padding:0;
+}
+.nested {
+    margin:0.2vw;
+    display: grid;
+    min-width:60vw;
+    grid-template-columns: 5.5fr 2fr 3.5fr;
+    grid-template-rows: 4.5fr 3.5fr;
+    grid-template-areas:
+        "main_content main_content sidebar"
+        "twin_l twin_r twin_r";
+}
+main{
+    grid-area:main_content;
+    background-color:limegreen;
+}
+aside {
+    grid-area: sidebar;
+    background-color: blueviolet;
+}
+div.right {
+    grid-area: twin_r;
+    background-color: orange;
+}
+div.left {
+    grid-area: twin_l;
+    background-color: orange;
+}
+div.nested >  *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0.2vw;
+}

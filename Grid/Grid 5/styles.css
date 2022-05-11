@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    align-items:center;
+    height:100vh;
+}
+div{
+    height:70vh;
+    width:100vw;
+    background-color:lightsteelblue;
+    padding:2vw;
+
+    display:grid;
+    grid-template-columns:4.5fr 7.5fr 2.5fr 2.5fr 3.5fr 0.5fr;
+    grid-template-rows:3fr 5.4fr;
+    grid-template-areas:
+        "red green_blue green blue dark_blue skye_blue "
+        "orange light_orange  light_orange blue dark_blue skye_blue";
+}
+
+div *{
+    margin:0.5vw;
+}
+.red{
+    grid-area:red;
+    background-color:mediumvioletred;
+}
+.green_blue {
+    grid-area:green_blue;
+    background-color:darkcyan;
+}
+.green {
+    grid-area:green;
+    background-color:forestgreen;
+}
+.blue {
+    grid-area:blue;
+    background-color:dodgerblue;
+}
+.dark_blue {
+    grid-area:dark_blue;
+    background-color:darkslateblue;
+}
+.skye_blue {
+    grid-area:skye_blue;
+    background-color:deepskyblue;
+}
+.orange {
+    grid-area:orange;
+    background-color:orangered;
+}
+.light_orange {
+    grid-area: light_orange;
+    background-color:orange;
+}
